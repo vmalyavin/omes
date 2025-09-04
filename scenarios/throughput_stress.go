@@ -209,6 +209,7 @@ func (t *tpsExecutor) Run(ctx context.Context, info loadgen.ScenarioInfo) error 
 						client.StartWorkflowOptions{
 							ID:                                       wfID,
 							TaskQueue:                                run.TaskQueue(),
+							WorkflowIDConflictPolicy:                 enums.WORKFLOW_ID_CONFLICT_POLICY_USE_EXISTING,
 							WorkflowIDReusePolicy:                    enums.WORKFLOW_ID_REUSE_POLICY_REJECT_DUPLICATE,
 							WorkflowExecutionTimeout:                 t.config.InternalIterTimeout,
 							WorkflowExecutionErrorWhenAlreadyStarted: false,
