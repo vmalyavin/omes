@@ -38,7 +38,7 @@ const (
 )
 
 const (
-	baseBackoff                               = 1 * time.Second
+	baseBackoff                               = 3 * time.Second
 	ThroughputStressScenarioIdSearchAttribute = "ThroughputStressScenarioId"
 )
 
